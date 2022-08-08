@@ -63,7 +63,7 @@ numberInputs.forEach(btn => {
 // Show empty password at first
 setShownPassword();
 
-// 禁止缩放
+// Disable scaling, work in safari
 // From https://www.yisu.com/zixun/353123.html
 window.addEventListener(
   "touchmove",
@@ -75,3 +75,9 @@ window.addEventListener(
   passive: false
 }
 );
+
+// Show keyboard when click input box
+document.getElementById("password-input").addEventListener("click", (event) => {
+  console.log("clicked");
+  document.getElementById("number-keyboard").style = "display:block";
+});
