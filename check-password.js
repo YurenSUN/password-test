@@ -66,8 +66,9 @@ setShownPassword();
 // From https://blog.csdn.net/weixin_43935657/article/details/119040446
 var lastTouch = 0
 window.addEventListener(
-  "touched",
+  "click",
   function (event) {
+    alert("touched")
     var now = Date.now();
     if (now - lastTouch <= 300){
       event.preventDefault();
