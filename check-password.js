@@ -52,7 +52,6 @@ async function updateCurrentKey(input) {
 
 let numberInputs = document.getElementsByClassName("btn btn-light w-100 number-input");
 numberInputs = Array.from(numberInputs);
-// console.log(numberInputs[0].innerHTML)
 numberInputs.forEach(btn => {
   btn.addEventListener("click", (event) => {
     updateCurrentKey(btn.innerHTML)
@@ -81,6 +80,5 @@ window.addEventListener(
 
 // Show keyboard when click input box
 document.getElementById("password-input").addEventListener("click", (event) => {
-  console.log("clicked");
   document.getElementById("number-keyboard").style = "display:block";
 });
