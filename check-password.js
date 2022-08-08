@@ -62,21 +62,21 @@ numberInputs.forEach(btn => {
 // Show empty password at first
 setShownPassword();
 
-// Disable scaling, work in safari
-// From https://blog.csdn.net/weixin_43935657/article/details/119040446
-var lastTouch = 0
-window.addEventListener(
-  "touchend",
-  function (event) {
-    var now = Date.now();
-    if (now - lastTouch <= 300){
-      event.preventDefault();
-    }
-    lastTouch = now;
-  }, {
-  passive: false
-}
-);
+// // Disable scaling, work in safari
+// // From https://blog.csdn.net/weixin_43935657/article/details/119040446
+// var lastTouch = 0
+// window.addEventListener(
+//   "touchend",
+//   function (event) {
+//     var now = Date.now();
+//     if (now - lastTouch <= 300){
+//       event.preventDefault();
+//     }
+//     lastTouch = now;
+//   }, {
+//   passive: false
+// }
+// );
 
 // Show keyboard when click input box
 document.getElementById("password-input").addEventListener("click", (event) => {
