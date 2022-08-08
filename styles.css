@@ -1,3 +1,8 @@
+/* disable scaling */
+body{
+  touch-action: manipulation;
+}
+
 #password-input {
   left: 35%;
   top: 25%;
