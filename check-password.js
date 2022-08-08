@@ -1,12 +1,13 @@
-KEY = "74356"
-CURKEY = ""
+var KEY = "74356"
+var CURKEY = ""
 
 function checkPassword() {
   if (CURKEY === KEY) {
     // Change image src to success box
     document.getElementById("box-img").src = "placeholder-success.png";
-    // hide number input keyboards
+    // hide number input keyboards and displayed password
     document.getElementById("number-keyboard").style = "display: none;";
+    document.getElementById("password-input").style = "display: none;";
   } else {
     // Reset current key
     CURKEY = "";
@@ -15,21 +16,26 @@ function checkPassword() {
 }
 
 // Change the password shown in webpage
-function setShownPassword(){
+function setShownPassword() {
   console.log(CURKEY)
+  // In case of undefined CURKEY
+  if (CURKEY === undefined){
+    console.log("checked")
+  }
+
   var inputTexts = document.getElementsByClassName("password-digit");
   var curKeyLen = CURKEY.length
-  for (let i = 0; i < 5; i++) { 
-    if (i < curKeyLen){
+  for (let i = 0; i < 5; i++) {
+    if (i < curKeyLen && CURKEY[i]) {
       inputTexts[i].value = CURKEY[i];
-    }else{
+    } else {
       inputTexts[i].value = "";
     }
   }
 }
 
 // Number input listener
-function updateCurrentKey(input) {
+async function updateCurrentKey(input) {
   // check whether delete last number
   if (input == "删除") {
     if (CURKEY) {
@@ -44,8 +50,10 @@ function updateCurrentKey(input) {
 
   // Reached 5 digit, check correct or not
   if (CURKEY.length >= 5) {
-    checkPassword();
+    // Use settimeout to show 5 digits before updating
+    setTimeout("checkPassword()","100");
   }
+
 }
 
 let numberInputs = document.getElementsByClassName("btn btn-light w-100 number-input");
@@ -58,5 +66,6 @@ numberInputs.forEach(btn => {
 
 });
 
-updateCurrentKey();
+// Show empty password at first
+setShownPassword();
 

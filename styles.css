@@ -21,11 +21,12 @@
 #box-img {
   top: 10%!;
   height: calc(50vh);
+  /* width: calc(50vw); */
 }
 
 #number-keyboard {
   position: fixed;
-  top: 60%;
+  top: 55%;
   left: 10%;
   max-width: 80%;
 }
@@ -33,4 +34,6 @@
 #number-keyboard button {
   margin-bottom: 2%;
   max-height: 20%;
+  height: calc(10vh);
+  font-size: x-large;
 }
