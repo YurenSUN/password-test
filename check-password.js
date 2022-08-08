@@ -17,12 +17,6 @@ function checkPassword() {
 
 // Change the password shown in webpage
 function setShownPassword() {
-  console.log(CURKEY)
-  // In case of undefined CURKEY
-  if (CURKEY === undefined){
-    console.log("checked")
-  }
-
   var inputTexts = document.getElementsByClassName("password-digit");
   var curKeyLen = CURKEY.length
   for (let i = 0; i < 5; i++) {
@@ -51,7 +45,7 @@ async function updateCurrentKey(input) {
   // Reached 5 digit, check correct or not
   if (CURKEY.length >= 5) {
     // Use settimeout to show 5 digits before updating
-    setTimeout("checkPassword()","100");
+    setTimeout("checkPassword()", "100");
   }
 
 }
@@ -69,3 +63,15 @@ numberInputs.forEach(btn => {
 // Show empty password at first
 setShownPassword();
 
+// 禁止缩放
+// From https://www.yisu.com/zixun/353123.html
+window.addEventListener(
+  "touchmove",
+  function (event) {
+    if (event.scale !== 1) {
+      event.preventDefault();
+    }
+  }, {
+  passive: false
+}
+);
