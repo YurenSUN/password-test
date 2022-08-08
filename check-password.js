@@ -63,18 +63,18 @@ numberInputs.forEach(btn => {
 // Show empty password at first
 setShownPassword();
 
-// Disable scaling, work in safari
-// From https://www.yisu.com/zixun/353123.html
-window.addEventListener(
-  "touchmove",
-  function (event) {
-    if (event.scale !== 1) {
-      event.preventDefault();
-    }
-  }, {
-  passive: false
-}
-);
+// // Disable scaling, work in safari
+// // From https://www.yisu.com/zixun/353123.html
+// window.addEventListener(
+//   "touchmove",
+//   function (event) {
+//     if (event.scale !== 1) {
+//       event.preventDefault();
+//     }
+//   }, {
+//   passive: false
+// }
+// );
 
 // Show keyboard when click input box
 document.getElementById("password-input").addEventListener("click", (event) => {
