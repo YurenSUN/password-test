@@ -68,14 +68,12 @@ var lastTouch = 0
 document.addEventListener(
   "touchend",
   function (event) {
-    var now = Date.now();
+    var now = (new Date()).getTime();
     if (now - lastTouch <= 300){
       event.preventDefault();
     }
     lastTouch = now;
-  }, {
-  passive: false
-}
+  }, false
 );
 
 // Show keyboard when click input box
