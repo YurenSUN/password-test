@@ -3,10 +3,11 @@ CURKEY = ""
 
 function checkPassword() {
   if (CURKEY === KEY) {
-    alert("成功")
-  } else {
-    alert("失败")
-  }
+    // Change image src to success box
+    document.getElementById("box-img").src = "placeholder-success.png";
+    // hide number input keyboards
+    document.getElementById("number-keyboard").style="display: none;";
+  } 
 
   // Reset current key
   CURKEY = "";
