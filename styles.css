@@ -1,0 +1,36 @@
+#password-input {
+  left: 35%;
+  top: 25%;
+  max-width: 30%;
+  min-width: 30%;
+  position: fixed;
+}
+
+#password-input input{
+  border: 2.5px black solid;
+  display: inline;
+  width: 16%;
+  min-width: 16%;
+  font-size: x-large;
+  font-weight: 900;
+  color: black;
+  margin: 0.5%;
+  text-align: center;
+}
+
+#box-img {
+  top: 10%!;
+  height: calc(50vh);
+}
+
+#number-keyboard {
+  position: fixed;
+  top: 60%;
+  left: 10%;
+  max-width: 80%;
+}
+
+#number-keyboard button {
+  margin-bottom: 2%;
+  max-height: 20%;
+}

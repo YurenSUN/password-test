@@ -6,12 +6,26 @@ function checkPassword() {
     // Change image src to success box
     document.getElementById("box-img").src = "placeholder-success.png";
     // hide number input keyboards
-    document.getElementById("number-keyboard").style="display: none;";
-  } 
+    document.getElementById("number-keyboard").style = "display: none;";
+  } else {
+    // Reset current key
+    CURKEY = "";
+    setShownPassword();
+  }
+}
 
-  // Reset current key
-  CURKEY = "";
-  document.getElementById("password-input").innerHTML = CURKEY;
+// Change the password shown in webpage
+function setShownPassword(){
+  console.log(CURKEY)
+  var inputTexts = document.getElementsByClassName("password-digit");
+  var curKeyLen = CURKEY.length
+  for (let i = 0; i < 5; i++) { 
+    if (i < curKeyLen){
+      inputTexts[i].value = CURKEY[i];
+    }else{
+      inputTexts[i].value = "";
+    }
+  }
 }
 
 // Number input listener
@@ -26,7 +40,7 @@ function updateCurrentKey(input) {
   }
 
   // Show current input
-  document.getElementById("password-input").innerHTML = CURKEY;
+  setShownPassword();
 
   // Reached 5 digit, check correct or not
   if (CURKEY.length >= 5) {
@@ -43,4 +57,6 @@ numberInputs.forEach(btn => {
   });
 
 });
+
+updateCurrentKey();
 
