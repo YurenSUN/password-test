@@ -1,20 +1,22 @@
 /* disable scaling */
 body{
   touch-action: manipulation;
+  overflow: hidden;
 }
 
 #password-input {
   /* center */
   left: 36.5%;
-  top: 48%;
+  top: 45%;
   width: 30%;
   max-width: 30%;
   min-width: 30%;
   position: fixed;
+  opacity: 0.5;
 }
 
 #password-input input{
-  border: 2.5px black solid;
+  /* border: 2.5px black solid; */
   display: inline;
   width: 16%;
   min-width: 16%;
@@ -26,9 +28,11 @@ body{
 }
 
 #box-img {
-  top: 10%!;
+  position:absolute;
+  left: 50%;
+  /* margin: auto; */
+  transform: translateX(-50%);
   height: calc(100vh);
-  /* width: calc(50vw); */
 }
 
 #number-keyboard {
@@ -45,4 +49,5 @@ body{
   max-height: 20%;
   height: calc(10vh);
   font-size: x-large;
+  opacity: 0.5;
 }
