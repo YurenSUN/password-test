@@ -7,7 +7,7 @@ body{
 #password-input {
   /* center */
   left: 36.5%;
-  top: 58%;
+  top: 57%;
   transform: translateY(-50%);
   width: 30%;
   max-width: 30%;
@@ -37,7 +37,7 @@ body{
 
 #number-keyboard {
   position: fixed;
-  top: 60%;
+  top: 59%;
   left: 20%;
   max-width: 60%;
   height: 30%;
@@ -45,7 +45,7 @@ body{
 }
 
 #number-keyboard button {
-  margin-bottom: 2%;
+  margin-bottom: 0.3%;
   max-height: 10%;
   height: calc(10vh);
   font-size: x-large;
