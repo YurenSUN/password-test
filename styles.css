@@ -7,12 +7,13 @@ body{
 #password-input {
   /* center */
   left: 36.5%;
-  top: 45%;
+  top: 50%;
+  transform: translateY(-50%);
   width: 30%;
   max-width: 30%;
   min-width: 30%;
   position: fixed;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 #password-input input{
