@@ -4,7 +4,7 @@ var CURKEY = ""
 function checkPassword() {
   if (CURKEY === KEY) {
     // Change image src to success box
-    document.getElementById("box-img").src = "box-open.jpeg";
+    document.getElementById("box-img").src = "box-open.jpg";
     // hide number input keyboards and displayed password
     document.getElementById("number-keyboard").style = "display: none;";
     document.getElementById("password-input").style = "display: none;";
